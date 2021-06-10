@@ -1,0 +1,21 @@
+kafka:
+  bootstrap-servers: 127.0.0.1:9092
+  consumergroup: leitorvendedor_group
+  topictopics1: topic_transformar_arquivo_s1
+  topictopics2: topic_transformar_arquivo_s2
+  topictopics3: topic_transformar_arquivo_s3
+  topictopics4: topic_transformar_arquivo_s4
+  topicgravardados: topic_gravar_dados_arquivo_s1
+  topicarquivoprocessado: topic_arquivo_processado
+  producer:
+    max:
+      request:
+        size: 231072000
+    batch-size: 60000000
+    buffer-memory: 60000000
+    client-id: leitorvendedor_producer
+  consumer:
+    group-id: leitorvendedor_group
+    auto-offset-reset: earliest
+    enable-auto-commit: false
+    delete-topic-enable: true

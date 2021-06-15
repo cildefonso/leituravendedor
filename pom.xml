@@ -14,7 +14,7 @@
 	<artifactId>leituravendedor</artifactId>
 	<!--version>0.0.1-SNAPSHOT</version-->
 	<name>leituravendedor</name>
-
+	<description>Leitura de arquivos do vendedor</description>
 	<properties>
 		<java.version>11</java.version>
 		<org.jacoco.version>0.8.5</org.jacoco.version>

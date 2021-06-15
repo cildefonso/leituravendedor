@@ -1,5 +1,6 @@
 package bip.leituravendedor.com.br.gateway.repository;
 
+import java.util.List;
 import java.util.UUID;
 
 import org.springframework.data.jpa.repository.Modifying;
@@ -18,5 +19,8 @@ public interface FileSaveRepository extends CrudRepository<FileSave, UUID> {
     
 	@Query("select id, path, newnamefile, status from FileSave where status = ?1 and id = ?2")
 	FileSave findByIdStatus(@NotNull String status, @NotNull UUID uuid);
+	
+	@Query(value = "select id, path, newnamefile, status from information_files where id = ?1 and status = ?2", nativeQuery = true)
+	FileSave findAllIdStatus(@NotNull UUID uuid, @NotNull String status);
 
 }

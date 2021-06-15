@@ -25,5 +25,8 @@ public class GetFileSaveService {
     	String recebido = FileStatusEnum.RECEBIDO.toString();
         return fileSaveRepository.findByIdStatus(recebido, uuid);
     }
-    
+    public FileSave findAllIdStatus(@NotNull UUID uuid, @NotNull String status) {
+  	
+        return fileSaveRepository.findAllIdStatus(uuid, status);
+    }
 }

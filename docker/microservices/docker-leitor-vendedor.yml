@@ -6,7 +6,7 @@ services:
     ports:
       - 8042:8042
     environment:
-      - spring_datasource_url=jdbc:postgresql://172.18.0.1/gnus
+      - spring_datasource_url=jdbc:postgresql://172.18.0.1:5432/gnus
       - s3_host=http://172.18.0.1:9444/s3
       - kafka_bootstrap-servers=172.18.0.1:9092
     deploy:
